@@ -1,9 +1,17 @@
-#include <stdio.h>
-#include "add.h"
+#include <iostream>
+#include "Text.h"
 
-int main() {
-  printf("hello!\n");
-  printf("%d\n", add(1, 2));
+using namespace std;
 
+int main()
+{
+
+  char* temp = "Qwerty. \nAsd fgh zxc.";
+  Text A(temp);
+  TextIter B = A.Find("w");
+
+  A.InsertData("New", B);
+
+  cout << endl << A;
   return 0;
 }
